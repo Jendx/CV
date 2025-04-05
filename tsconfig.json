@@ -6,9 +6,10 @@
       "dom.iterable",
       "esnext"
     ],
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
-      "@Containers/*": ["./src/Containers/*"]
+      "@Containers/*": ["Containers/*/index"],
+      "@Constants/*": ["Constants/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
@@ -24,7 +25,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/**/*"]
 }

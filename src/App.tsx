@@ -1,9 +1,11 @@
 import React from 'react';
+import "./i18n/i18n";
 import { MainLayout } from './Containers';
 import { Container, CssBaseline, ThemeProvider } from '@mui/material';
-import { DARK_THEME } from './Resources/Themes';
+import { DARK_THEME } from './Utils/themes';
 
 function App() {
+
   return (
     <ThemeProvider theme={DARK_THEME}>
       <CssBaseline />

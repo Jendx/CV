@@ -313,7 +313,8 @@ module.exports = function (webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
-        "@Containers": path.resolve(paths.appSrc, '../src/Containers'),
+        "@Containers": path.resolve(paths.appSrc, 'Containers'),
+        "@Constants": path.resolve(paths.appSrc, 'Constants'),
       },
       plugins: [
         new ModuleScopePlugin(paths.appSrc, [
