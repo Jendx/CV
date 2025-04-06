@@ -1,11 +1,13 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
-import HeaderLayout from "@Containers/HeaderLayout";
 
-const MainLayout = () => {
+interface MainLayoutProps {
+  selectedLayout: number
+}
+
+const MainLayout = ({ selectedLayout }: MainLayoutProps) => {
   return (
     <Box>
-      <HeaderLayout />
       <Grid container direction="column" justifyContent="flex-start">
         <Grid>
           PART 1

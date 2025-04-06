@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./i18n/i18n";
-import { MainLayout } from './Containers';
+import { HeaderLayout, MainLayout } from './Containers';
 import { Container, CssBaseline, ThemeProvider } from '@mui/material';
 import { DARK_THEME } from './Utils/themes';
+import MAIN_LAYOUTS from "@Constants/mainLayouts";
 
 function App() {
-
+  const [selectedMainContent, setSelectedMainContent] = useState<number>(MAIN_LAYOUTS.CV)
   return (
     <ThemeProvider theme={DARK_THEME}>
       <CssBaseline />
-      <Container>
-          <MainLayout/>
+      <HeaderLayout onButtonClicked={setSelectedMainContent}/>
+      <Container className='App_Container'>
+          <MainLayout selectedLayout={selectedMainContent}/>
       </Container>
     </ThemeProvider>
   );
