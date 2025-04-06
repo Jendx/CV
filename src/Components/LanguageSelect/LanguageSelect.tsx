@@ -1,7 +1,5 @@
 import {
   Box,
-  ListItemIcon,
-  ListItemText,
   MenuItem,
   Select,
   SelectChangeEvent,
@@ -10,7 +8,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import SUPPORTED_LANGUAGES from "@Constants/supportedLanguages";
 
-const LanguageSwitcher = () => {
+const LanguageSelect = () => {
   const { i18n } = useTranslation();
 
   const onChangeLang = (event: SelectChangeEvent<string>) => {
@@ -20,15 +18,26 @@ const LanguageSwitcher = () => {
 
   return (
     <Select
-      labelId="demo-select-small-label"
-      id="demo-select-small"
+      labelId="LanguageSwitcher_language-select"
+      id="LanguageSwitcher_language-select"
       value={i18n.language}
       onChange={onChangeLang}
+      autoWidth
     >
       {Object.values(SUPPORTED_LANGUAGES).map((language, i) => {
         return (
-          <MenuItem key={`MenuItem${i}-${language.code}`} value={language.code}>
-            <ListItemIcon>
+          <MenuItem
+            key={`LanguageSwitcher_Menu-Item${i}-${language.code}`}
+            value={language.code}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                gap: 1,
+              }}
+            >
               <Box
                 component="img"
                 src={`https://flagcdn.com/24x18/${language.iconCode}.png`}
@@ -40,8 +49,8 @@ const LanguageSwitcher = () => {
                   objectFit: "cover",
                 }}
               />
-            </ListItemIcon>
-            <ListItemText>{language.label}</ListItemText>
+              {language.label}
+            </Box>
           </MenuItem>
         );
       })}
@@ -49,4 +58,4 @@ const LanguageSwitcher = () => {
   );
 };
 
-export default LanguageSwitcher;
+export default LanguageSelect;
