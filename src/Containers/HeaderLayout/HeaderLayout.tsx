@@ -3,10 +3,10 @@ import { Button, ButtonGroup, Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import TRANSLATION_KEYS from "@Constants/translationKeys";
 import { LanguageSelect } from "Components";
-import MAIN_LAYOUTS from "@Constants/mainLayouts";
+import MAIN_LAYOUTS, { KeysOfMainLayout } from "@Constants/mainLayouts";
 
 interface HeaderLayoutProps {
-  onButtonClicked: (value: number) => void;
+  onButtonClicked: (value: KeysOfMainLayout) => void;
 };
 
 const HeaderLayout = ({ onButtonClicked }: HeaderLayoutProps) => {

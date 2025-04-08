@@ -3,10 +3,10 @@ import "./i18n/i18n";
 import { HeaderLayout, MainLayout } from './Containers';
 import { Container, CssBaseline, ThemeProvider } from '@mui/material';
 import { DARK_THEME } from './Utils/themes';
-import MAIN_LAYOUTS from "@Constants/mainLayouts";
+import MAIN_LAYOUTS, { KeysOfMainLayout } from "@Constants/mainLayouts";
 
 function App() {
-  const [selectedMainContent, setSelectedMainContent] = useState<number>(MAIN_LAYOUTS.CV)
+  const [selectedMainContent, setSelectedMainContent] = useState<KeysOfMainLayout>(MAIN_LAYOUTS.CV)
   return (
     <ThemeProvider theme={DARK_THEME}>
       <CssBaseline />
