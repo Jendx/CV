@@ -5,6 +5,8 @@ const cz: Languages = {
   [TRANSLATION_KEYS.HeaderLayout_Home]: "Doma",
   [TRANSLATION_KEYS.HeaderLayout_Cv]: "Životopis",
   [TRANSLATION_KEYS.HeaderLayout_Referals]: "Doporučení",
+  [TRANSLATION_KEYS.CvBody_AboutMeTitle]: "O mně",
+  [TRANSLATION_KEYS.CvBody_AboutMeText]: "Jsem člověk, který miluje hudbu, dobrou společnost a rád se neustále učí novým věcem. Programování mě zaujalo už na střední škole, což mě přivedlo ke studiu informatiky na VŠB. V posledním ročníku jsem nastoupil na brigádu jako software developer a po ukončení studia jsem se vývoji začal věnovat naplno. Díky tomu se moje dovednosti neustále prohlubují a rozšiřuji si znalosti v oboru."
 };
 
 export default cz;
