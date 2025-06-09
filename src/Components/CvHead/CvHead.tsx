@@ -1,6 +1,6 @@
-import { Avatar, Box, Grid } from "@mui/material";
+import { Avatar, Grid } from "@mui/material";
 import React from "react";
-import styles from './CvHead.module.css'
+import styles from 'global.module.css'
 
 const CvHead = () => {
     return (
@@ -21,7 +21,7 @@ const CvHead = () => {
             </Grid>
             <Grid>
                 <h1>Bc. Jan Bartovič</h1>
-                <h2 className={styles['CvHead_role-title']}>Software Developer</h2>
+                <h2 className={`${styles['text-underline']} ${styles['text-center']}`}>Software Developer</h2>
             </Grid>
         </Grid>
 

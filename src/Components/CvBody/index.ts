@@ -1,1 +1,1 @@
-export { default } from "./CvBody"
+export { default } from './CvBody'
