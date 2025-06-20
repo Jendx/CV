@@ -10,8 +10,6 @@ export interface WorkItemProps {
 }
 
 const WorkItem = ({companyName, jobPositionName, startDate, endDate, description}: WorkItemProps) => {
-    const endDateString = endDate ?? '*';
-
     return (
         <div className={`${companyName}-WorkItem`}>
             <dl>
