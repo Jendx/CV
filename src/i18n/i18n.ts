@@ -9,6 +9,14 @@ i18n.use(initReactI18next).init({
   fallbackLng: SUPPORTED_LANGUAGES.en.code,
   interpolation: {
     escapeValue: false,
+    format: (value, _, lng) => {
+      if(value instanceof Date) {
+        const formatter = new Intl.DateTimeFormat(lng, { year: 'numeric', month: 'numeric' })
+        return formatter.format(value);
+      }
+
+      return value;
+    }
   },
   resources: {
     en: {
